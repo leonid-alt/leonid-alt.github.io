@@ -1,0 +1,336 @@
+
+
+
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251"/>
+    <title>3D modeling</title>
+    <meta name="generator" content="Neat Office 6.2.8.2 (Windows)"/>
+
+    <style type="text/css">
+        @page { size: 21cm 29.7cm; margin-left: 2cm; margin-right: 2cm; margin-top: 2cm; margin-bottom: 1.37cm }
+        p { margin-bottom: 0.21cm; background: transparent }
+    </style>
+</head> -->
+
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <title>3D моделирование</title>
+
+    <style>
+        .nubex {
+        font-family:sans-serif
+        /*font-size : 18px; */
+    }
+   </style>
+
+     <!-- Инструкция для IE -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <!-- Отображать страницу в масштабе 100% -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Нормализация стилей -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+     <!-- Собственные стили -->
+     <link rel="stylesheet" href="css/main.css">
+
+      <!-- Подключение веб-шрифтов -->
+     <link href="https://fonts.googleapis.com/css?family=Merriweather|PT+Sans+Caption:400,700&display=swap" rel="stylesheet">
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+     <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+
+
+</head>
+
+
+<body
+ <div class="nubex">
+<p> 1. Настройка единиц измерения:</p>
+
+<p> Castomize/Unit Setup.../System Unit Setup 1Unit = Centimeter  -Ok</p>
+<p>    Generic Units  -OK</p>
+
+<p>    Castomize/Preference
+Setting/General/Texture Coordinates - убрать галку с Use Real-World Coordinates      -Ok</p>
+
+<p>Нажимаем кнопку с [+] в любом видовом окне:
+Configure Viewports... /Display Performans/Texture
+    Maps: - 2048 Pixel  -OK</p>
+
+<p >2. В 3 ds MAX нам потребуется наклеить чертежи планов этажей  на обычные плейны:</p>
+<p>    нажмем создание (Рис. 1),
+Object Type, Plane и нарисуем на
+виде сверху Top) стандартную максовскую плоскость (квадрат):</p>
+
+<p>
+ <img src="img/img_cottage/Cottage_1.jpg" name="Рис.1" align="left" width="191" height="327">
+  <br clear="left"/>
+</img> Рис.1</p>
+
+
+<p>Перейдя в панель модификации (Рис. 2) зададим размеры этой плоскости 1384x1384 см.</p>
+
+<img src="img/img_cottage/Cottage_2.jpg" name="Рис.2" align="left" width="197" height="399">
+  <br clear="left"/>
+</img>
+
+<p> Рис. 2</p>
+
+<p>Количество сегментов построенной плоскости по высоте и ширине - 1.</p>
+
+<p>На виде сверху (Top) проверить положение плоскости по центру окна.</p>
+
+<p>На виде сбоку (Front) таких плоскостей потребуется две: одна лежит на земле (высота
+Z=0), вторую же мы скопируем повыше:</p>
+
+<p> - нажимаем инструмент выделить и сдвинуть;</p>
+
+<img src="img/img_cottage/Cottage_3.jpg" name="Рис.3" align="left" width="161" height="91">
+  <br clear="left"/>
+</img>
+<p>Рис. 3</p>
+
+<p>- поднимаем мышкой ось Y вверх при нажатом Shift, в диалоге Clone
+Options выбираем Copy -Ok (Рис.4).<br/>Позже мы поставим эту плоскость на заданную высоту.</p>
+
+<img src="img/img_cottage/Cottage_4.jpg" name="Рис.4" align="left" width="485" height="561">
+  <br clear="left"/>
+</img>
+<p>Рис. 4</p>
+
+
+<p>Откроем в проводнике папку проекта Cottage, выберем картинку<br/>
+ref_plan_level_1.jpg (план первого этажа) и перетаскиваем её на<br/>
+нижнюю плоскость окна перспективы (Perspective), а картинку  ref_plan_level_2.jpg (план второго этажа)<br/>
+перетаскиваем на верхнюю плоскость окна перспективы (Perspective). (рис. 5) (6:35)</p>
+
+<img src="img/img_cottage/Cottage_5.jpg" name="Рис.5" align="left" width="751" height="288">
+  <br clear="left"/>
+</img>
+<p>Рис. 5</p>
+
+
+<p>Второй этаж здания должен находиться на высоте 300 см.<br/> Поэтому выделим верхний чертеж и зададим
+высоту его плоскости 300 см. (рис. 6)</p>
+
+<img src="img/img_cottage/Cottage_6.jpg" name="Рис.6" align="left" width="323" height="449">
+  <br clear="left"/>
+</img>
+<p>Рис. 6</p>
+
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+
+<p>Назначим чертежам верхнего и нижнего этажей несколько типовых настроек:</p>
+выделим обе плоскости в окне перспективы (Perspective) и нажмем правую кнопку мыши -
+</p>
+<p align="center" style="margin-bottom: 0cm"><br/>
+
+</p>
+<img src="img/img_cottage/Cottage_7.jpg" name="Рис.7" align="left" width="463" height="539">
+  <br clear="left"/>
+</img>
+<p>Рис. 7</p>
+
+<p align="center" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p>Выбираем левой кнопкой Object Properties (Рис. 7).</p>
+
+<p lang="en-US" align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+
+<p>В появившейся панели Object Properties (Рис. 8):</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<img src="img/img_cottage/Cottage_8.jpg" name="Рис.8" align="left" width="507" height="678">
+  <br clear="left"/>
+</img>
+<p>Рис. 8</p>
+
+<p lang="en-US" align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p > - ставим галку в Backface Cull - она позволяет чертежам исчезать, если смотрим на них с
+обратной стороны плоскости;</p>
+
+<p> - убираем галку Show Frozen in Gray - эта галочка в убранном состоянии разрешает
+сохранять чертежи даже если они находятся в замороженном состоянии;</p>
+
+<p> - убираем галку Renderable чтобы чертежи не появлялись на визуализации.Если эта галка не доступна, то переключите By Layer на By Object.</p>
+
+
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p>Теперь выделим верхний чертеж (Рис. 9). Затем жмем правую кнопку - и в открывшемся списке
+выбираем - Hide Selection. Верхний чертеж спрятан и не видим.</p>
+
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<img src="img/img_cottage/Cottage_9.jpg" name="Рис.9" align="left" width="461" height="488">
+  <br clear="left"/>
+</img>
+<p>Рис. 9</p>
+
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Чертеж первого этажа мы не
+будем прятать а заморозим:</p>
+<p lang="en-US" align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<ul>
+    <li><p align="left" style="margin-bottom: 0cm">выделим чертеж левой
+    кнопкой а затем правой кнопкой вызовем контекстное меню в котором
+    выберем &mdash; <span lang="en-US">Freeze Selection.</span></p>
+</ul>
+<img src="img/img_cottage/Cottage_10.jpg" name="Рис.10" align="left" width="333" height="391">
+  <br clear="left"/>
+</img>
+<p>Рис. 10</p>
+
+<p>После заморозки вы не сможете выделить чертеж.</p>
+<p>Для разморозки чертежа нажать Unfreeze All.</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+
+<p>Теперь на виде сверху (Top) нам нужно включить отображение в
+режиме заливки, или правильнее - тонирования.</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+
+<p>В правом верхнем углу нажмите по названию особых настроек режима (Рис. 11) и уберите галку Wireframe Override (F3).<br/>
+Также включим из того же меню опцию подчеркивания ребер - Edged Faces (<F4).</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+
+<img src="img/img_cottage/Cottage_11.jpg" name="Рис.11" align="left" width="591" height="383">
+  <br clear="left"/>
+</img>
+<p>Рис.11</p>
+
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Чтобы скрыть отображение
+координатной сетки нажать клавишу G или g, или нажать на <span lang="en-US">[+]
+</span>и в раскрывшемся меню убрать галку <span lang="en-US">Show
+Grids:</span></p>
+<p lang="en-US" align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="center" style="margin-bottom: 0cm"><img src="Cottage_htm_1fbeeb45c4f5a42c.jpg" name="Р“СЂР°С„РёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚13" align="left" width="272" height="278">
+  <br clear="left"/>
+</img>
+Рис.
+12</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Тоже самое проделаем в
+окне перспектива <span lang="en-US">(Perspective):</span></p>
+<p lang="en-US" align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="center" style="margin-bottom: 0cm"><img src="Cottage_htm_322b6184a09b01a5.jpg" name="Р“СЂР°С„РёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚12" align="left" width="369" height="271">
+  <br clear="left"/>
+</img>
+Рис.
+13</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Оба вида отображаются в
+режиме тонирования <span lang="en-US">(Wireframe Override </span>без
+галки, или <span lang="en-US">F3) </span>и с подчеркнутыми ребрами
+(вкл. галку <span lang="en-US">Edged Faces </span>или <span lang="en-US">F</span>4).</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Координатную сетку
+отключаем во всех видах.</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">На этом предварительная
+подготовка завершена и мы готовы начать работу!</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Прежде чем продолжить,
+необходимо сохранить все сделанные настройки и изменения в рабочую
+папку проекта.</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Начнем строить стены.
+Выделим вид сверху <span lang="en-US">(Top) </span>и развернем его на
+весь экран кнопкой в правом нижнем углу (Рис. 14). <span lang="en-US">(9:19
+</span>мин.)</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="center" style="margin-bottom: 0cm"><img src="Cottage_htm_668ebabae3d73b3e.jpg" name="Р“СЂР°С„РёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚15" align="left" width="476" height="260">
+  <br clear="left"/>
+</img>
+Рис.
+14</p>
+<p align="center" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm">Выберем команду
+Создать/Плоские фигуры/Линия и зададим ей режим <span lang="en-US">Corner/Corner</span>:</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="center" style="margin-bottom: 0cm"><img src="Cottage_htm_36f46190489266a1.jpg" name="Р“СЂР°С„РёС‡РµСЃРєРёР№ РѕР±СЉРµРєС‚14" align="left" width="162" height="481">
+  <br clear="left"/>
+</img>
+Рис.
+15</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm"><br/>
+
+</p>
+<div title="footer"><p style="margin-top: 0.5cm; margin-bottom: 0cm"><sdfield type=DATETIME sdval="43850,5317177083" sdnum="1049;1049;DD.MM.YY">20.01.20</sdfield>        <sdfield type=PAGE subtype=RANDOM format=PAGE>7</sdfield></p>
+</div>
+</div>
+</body>
+</html>
