@@ -1,0 +1,120 @@
+@media (min-width: 1500px) and (max-width: 5000px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    header .navbar-brand img {
+    width: 50%;
+}
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .social-icons-header {
+        position: unset;
+    }
+    header ul.navbar-nav.ml-left {
+        top: 0px;
+        margin-left: 0px;
+    }
+    header .navbar-brand img {
+        width: 50%;
+    }
+    .navbar-brand {
+        margin-left: 0px;
+    }
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-toggler {
+        padding: 0px;
+    }
+    .banner h1 {
+        font-size: 45px;
+    }
+    .banner p {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+    .banner {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        height: auto;
+    }
+    header.fixedbar .navbar-brand img {
+        width: 50%;
+        padding-top: 0px;
+    }
+    header.fixedbar {
+        padding: 7px 0px;
+       height:auto;
+    }
+    ul.nav-tabs li a {
+        font-size: 16px;
+    }
+    ul.nav-tabs li {
+        margin-bottom: 1px;
+        margin-right: 0px;
+    }
+    ul.nav-tabs {
+        margin-bottom: 5px;
+    }
+    .title-row h2 {
+        font-size: 30px;
+    }
+    .row.title-row {
+        padding: 20px 0px 38px;
+    }
+    .product-img img {
+        position: unset;
+        -webkit-transform: translate(-0%, -0%);
+        -ms-transform: translate(-0%, -0%);
+        transform: translate(-0%, -0%);
+        width: 100%;
+        width: 90%;
+    }
+    .product-img {
+        height: auto;
+    }
+    .product-row [class^="col-"] {
+        padding: 0 20px;
+    }
+    .product-title {
+        font-size: 16px;
+    }
+    .desserts-row .product-content {
+        height: auto;
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    .footer-logo {
+        height: 70px !important;
+        top: -30px;
+    }
+    .footer-top {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .padding-50 {
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+    .footer_right .textwidget>h2 {
+        margin-bottom: 9px!important;
+        margin-top: 7px;
+    }
+    .copyright-wrapper a,
+    .copyright-wrapper p {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .copyright-wrapper p {
+        text-align: center;
+    }
+    #product_detail .modal-dialog {
+    max-width: 100%;
+    }
+}

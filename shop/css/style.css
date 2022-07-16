@@ -1,0 +1,253 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.no-margin {
+    margin: 0px;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+ 
+/* ====Navigation fix on scroll css start==== */
+
+header.fixedbar .navbar-brand img {
+    width: 70%;
+    padding-top: 6px;
+}
+
+header.fixedbar {
+    position: fixed;
+    padding: 0px;
+    z-index: 12;
+    height: 80px;
+}
+
+header.fixedbar .social-icons-header {
+    top: 22px;
+}
+
+header.fixedbar ul.navbar-nav.ml-left {
+    top: -13px;
+}
+
+
+/* ====Navigation fix on scroll css end==== */
+
+
+/* ====Navigation css start==== */
+
+.navbar-light .navbar-toggler-icon {
+    background-image: none;
+}
+
+.navbar-toggler-icon .icon-bar {
+    background-color: #fff;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin-bottom: 5px;
+}
+
+header ul.navbar-nav.ml-left {
+    transition: all ease 1s;
+    position: relative;
+    margin-left: 46px;
+}
+
+header .navbar-brand img {
+    width: 100%;
+    transition: all ease 1s;
+}
+header {
+    background: #1b1a65;
+    z-index: 9;
+    width: 100%;
+    padding-top: 16px;
+    transition: all 0.5s ease 0s;
+    position: absolute;
+    top: 0px;
+}
+
+.navbar .navbar-nav>li>a {
+    color: #060606!important;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 0px!important;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar .navbar-nav li {
+    padding: 10px 16px;
+}
+.social-icons-header li a i {
+    font-size: 20px;
+    color: #634f00;
+    background-color: #fff;
+    padding: 9px 9px;
+    border-radius: 50%;
+    margin-right: 0px;
+    color: #1b1a65;
+    width: 36px!important;
+    height: 36px!important;
+    text-align: center;
+}
+.social-icons-header {
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    transition: all ease 1s;
+}
+nav.navbar {
+    padding: 0px;
+}
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+a.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-brand {
+    margin-left: -15px;
+}
+.navbar .navbar-nav>li>a.nav-link.active {
+    color: #5b019e!important;
+}
+/* ====Navigation css end==== */
+/* ====banner css start==== */
+a.btn-seemore {
+    padding: 15px 50px;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    transition: all ease 1s;
+    background: #dc3545;
+    border-radius: 30px;
+    transition: all ease 1s;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+a.btn-seemore:hover{background: #dc3545;border-radius: 0px;}
+.banner-inner h2 {
+    color: #150025;
+    margin: 20px 0px;
+    
+}
+.banner-inner p {
+    font-weight: 300;
+    margin-bottom: 38px;
+  
+}
+/* ====banner css end==== */
+/* ====wrap css start==== */
+ body {
+	 position: relative;
+}
+.wrap {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+.wrap .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url(../images/bg.png) no-repeat center center;
+    background-size: cover;
+    transform: scale(1.1);
+    height: 100vh;
+    width: 100%;
+	overflow:hidden;
+}
+.bgcolor-2 {
+    background: #be8e8e59;
+    position: absolute;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 45%;
+    overflow: hidden;
+	transition:all ease 2s;
+}
+.bgcolor-1 {
+    background: #fda60859;
+    position: absolute;
+    width: 55%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    overflow: hidden;
+	transition:all ease 2s;
+}
+.bgcolor-1:hover{width: 65%;}
+.bgcolor-2.blur{width:35%;}
+.bgcolor-2:hover{width:55%;}
+.bgcolor-1.blur{width:45%;}
+.bgcolor-1:hover .pizza-img-box img.left {
+    right: 54px;
+}
+.bgcolor-2.blur .pizza-img-box img.right {
+     margin-left: -357px;
+	 left: 0px;
+}
+.bgcolor-2:hover .pizza-img-box img.right {
+    margin-left: -220px;
+    left: -9px;
+}
+.bgcolor-1.blur .pizza-img-box img.left {
+    margin-right: -377px;
+    right: 0px;
+}
+.bgcolor-2.blur
+.main-wrapper {
+    position: relative;
+	overflow:hidden;
+}
+.box-main-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.pizza-img-box img {
+    width: 600px;
+    position: absolute;
+	transition:all ease 2s;
+}
+.pizza-img-box img.right {
+    margin-left: -220px;
+    bottom: -72px;
+    left: -82px;
+}
+.pizza-img-box img.left {
+    margin-right: -300px;
+    bottom: -72px;
+    right: 0px;
+}
+/* ====wrap css end==== */
