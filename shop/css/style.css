@@ -209,18 +209,18 @@ a.btn-seemore:hover{background: #dc3545;border-radius: 0px;}
 .bgcolor-2.blur{width:35%;}
 .bgcolor-2:hover{width:55%;}
 .bgcolor-1.blur{width:45%;}
-.bgcolor-1:hover .pizza-img-box img.left {
+.bgcolor-1:hover .salat-img-box img.left {
     right: 54px;
 }
-.bgcolor-2.blur .pizza-img-box img.right {
+.bgcolor-2.blur .salat-img-box img.right {
      margin-left: -357px;
 	 left: 0px;
 }
-.bgcolor-2:hover .pizza-img-box img.right {
+.bgcolor-2:hover .salat-img-box img.right {
     margin-left: -220px;
     left: -9px;
 }
-.bgcolor-1.blur .pizza-img-box img.left {
+.bgcolor-1.blur .salat-img-box img.left {
     margin-right: -377px;
     right: 0px;
 }
@@ -235,19 +235,19 @@ a.btn-seemore:hover{background: #dc3545;border-radius: 0px;}
     top: 0px;
     left: 0px;
 }
-.pizza-img-box img {
+.salat-img-box img {
     width: 600px;
     position: absolute;
 	transition:all ease 2s;
 }
-.pizza-img-box img.right {
+.salat-img-box img.right {
     margin-left: -220px;
-    bottom: -72px;
+    bottom: 22px;
     left: -82px;
 }
-.pizza-img-box img.left {
+.salat-img-box img.left {
     margin-right: -300px;
-    bottom: -72px;
+    bottom: 22px;
     right: 0px;
 }
 /* ====wrap css end==== */
