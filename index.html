@@ -59,7 +59,28 @@
         });
         </script>
          <!-- // Скрипт прокрутки страницы вверх -->
-
+		 
+		 <!-- Еще один скрипт прокрутки страницы вверх -->
+		 <script>
+			$(window).scroll(function(){
+				var height = $(window).scrollTop();
+				if(height > 100){
+					$('#back2Top').fadeIn();
+				}
+				else{
+					$('#back2Top').fadeOut();
+				}
+			});
+    
+			$(document).ready(function(){
+				$("#back2Top").click(function(event){
+					event.preventDefault();
+					$("html, body").animate({ scrollTop: 0}, "slow");
+					return false;
+				});
+			}); 
+		</script>
+		<!-- // Еще один скрипт прокрутки страницы вверх -->
 
       <!-- Скрипт увеличения изображения по клику -->
     <script>
@@ -411,7 +432,7 @@
                             Development of an optical-electronic meter for local vertical <br>
                             <a href="http://cniitm.ru/" target="_blank">(сustomer - Central Scientific Research Institute of Precision Engineering, 1989 ).</a><br><br>
                             Development of an optical-electronic meter of frame instability<br> 
-                            <a href="http://www.npkgoi.ru/" target="_blank">(customer - Joint-stock company "State Optical Institute named after S.I. Vavilov ", 1986 ).</a>
+                            <a href="http://www.goi.ru/" target="_blank">(customer - Joint-stock company "State Optical Institute named after S.I. Vavilov ", 1986 ).</a>
                     
                     </div><!--//details-->
                 </div><!--//item-->
@@ -572,6 +593,8 @@
                 <small class="copyright">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Leonid N. Stepanov 2022</small>
         </div><!--//container-->
     </footer><!--//footer-->
+	
+
  
     <!-- Javascript -->          
     <!-- <script type="text/javascript" src="shares/plugins/jquery-1.11.3.min.js"></script> --> 
