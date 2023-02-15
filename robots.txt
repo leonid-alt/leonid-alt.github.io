@@ -1,0 +1,5 @@
+User-agent: *<br /> Disallow:<br /> 
+User-agent: *<br /> Disallow: /<br /> 
+User-agent: *<br /> Disallow: /folder/<br /> 
+User-agent: *<br /> Disallow: /page.html
+Sitemap: https://leonid-alt.github.io/sitemap_index.xml
