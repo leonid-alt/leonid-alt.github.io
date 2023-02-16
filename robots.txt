@@ -4,7 +4,7 @@ User-agent: *<br /> Disallow: /folder/<br />
 User-agent: *<br /> Disallow: /page.html
 User-agent:YandexBot
 # юзер-агент для роботов системы Яндекс
-User-agent:Googlebot, Bing
+User-agent:Googlebot
 # юзер-агент для роботов системы Google
 User-agent:Bing
 # юзер-агент для роботов системы Bing
