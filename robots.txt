@@ -2,4 +2,13 @@ User-agent: *<br /> Disallow:<br />
 User-agent: *<br /> Disallow: /<br /> 
 User-agent: *<br /> Disallow: /folder/<br /> 
 User-agent: *<br /> Disallow: /page.html
+User-agent:YandexBot
+# юзер-агент для роботов системы Яндекс
+User-agent:Googlebot, Bing
+# юзер-агент для роботов системы Google
+User-agent:Bing
+# юзер-агент для роботов системы Bing
+User-agent: *
+# юзер-агент для всех роботов
+User-agent: *
 Sitemap: https://leonid-alt.github.io/sitemap_index.xml
