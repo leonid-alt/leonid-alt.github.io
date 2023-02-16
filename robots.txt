@@ -1,6 +1,9 @@
 User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
+#файл robots.txt сообщает ботам,
+#что они могут сканировать все, кроме папки /wp-admin/.
+#Однако им разрешено сканировать один файл в папке /wp-admin/ с именем admin-ajax.php.
 #
 User-agent: YandexBot
 # юзер-агент для роботов системы Яндекс
@@ -10,8 +13,5 @@ User-agent: Googlebot
 #
 User-agent: Bingbot
 # юзер-агент для роботов системы Bing
-#
-User-agent: *
-# юзер-агент для всех роботов
 #
 Sitemap: https://leonid-alt.github.io/sitemap_index.xml
