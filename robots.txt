@@ -10,5 +10,4 @@ User-agent:Bing
 # юзер-агент для роботов системы Bing
 User-agent: *
 # юзер-агент для всех роботов
-User-agent: *
 Sitemap: https://leonid-alt.github.io/sitemap_index.xml
