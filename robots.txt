@@ -9,6 +9,9 @@ User-agent: YandexBot
 # юзер-агент для роботов системы Яндекс
 #
 User-agent: Googlebot
+User-agent: AdsBot-Google
+User-agent: Googlebot-news
+User-agent: Googlebot-Image
 # юзер-агент для роботов системы Google
 #
 User-agent: Bingbot
