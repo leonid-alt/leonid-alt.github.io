@@ -3,6 +3,49 @@
     <head>
     <meta charset="UTF-8">
     <title>Сайт-визитка на WordPress</title>
+
+        <!-- стили скрипта для прелоадера в виде анимированной svg иконки  -->
+        <style>
+            body {
+                margin: 0;
+            }
+            .preloader {
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
+                /* фоновый цвет */
+                background: #e0e0e0;
+                z-index: 1001;
+            }
+            .preloader__image {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                width: 70px;
+                height: 70px;
+                margin-top: -35px;
+                margin-left: -35px;
+                text-align: center;
+                animation: preloader-rotate 2s infinite linear;
+            }
+            @keyframes preloader-rotate {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .loaded_hiding .preloader {
+                transition: 0.3s opacity;
+                opacity: 0;
+            }
+            .loaded .preloader {
+                display: none;
+            }
+        </style>
+        <!-- // стили скрипта для прелоадера в виде анимированной svg иконки  -->
+
     <meta name="robots" content="noindex, nofollow">
     <!-- <link rel="shortcut icon" href="favico.ico"> -->
     <link rel="icon" href="https://leonid-alt.github.io/favicon.ico" type="image/x-icon">
@@ -146,9 +189,35 @@
         <meta name="generator" content="Elementor 3.11.1; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+
+        <!--  скрипт прелоадера в виде анимированной svg иконки -->
+        <script>
+            window.onload = function () {
+                document.body.classList.add('loaded_hiding');
+                window.setTimeout(function () {
+                    document.body.classList.add('loaded');
+                    document.body.classList.remove('loaded_hiding');
+                }, 500);
+            }
+        </script>
+        <!--  // скрипт прелоадера в виде анимированной svg иконки -->
+
     </head>
 
     <body class="page-template page-template-elementor_canvas page page-id-30 ast-desktop ast-page-builder-template ast-no-sidebar astra-4.0.2 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-canvas elementor-kit-29 elementor-page elementor-page-30 e--ua-blink e--ua-chrome e--ua-webkit ast-mouse-clicked" style="" data-elementor-device-mode="desktop">
+
+
+    <!--  Прелоадер в виде анимированной svg иконки -->
+    <div class="preloader">
+        <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor"
+                  d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+            </path>
+        </svg>
+    </div>
+    <!-- // Прелоадер в виде анимированной svg иконки -->
+
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR><feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG><feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0 1"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></feColorMatrix><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR><feFuncG type="table" tableValues="0 1"></feFuncG><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB><feFuncA type="table" tableValues="1 1"></feFuncA></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"></feComposite></filter></defs></svg>
