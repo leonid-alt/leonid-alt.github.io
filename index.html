@@ -30,12 +30,28 @@
     
      <!-- Стили Bootstrap -->
     <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <!-- <script src="shares/js/min/bootstrap.min.js"></script> -->
+
+    <!-- Подключаем скрипт плавной прокрутки до якоря -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Это сам скрипт плавной прокрутки до якоря -->
+    <script>
+        $(document).ready(function(){
+            $("a[href*='#']").on("click", function(e){
+                var anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(anchor.attr('href')).offset().top
+                }, 777);
+                e.preventDefault();
+                return false;
+            });
+        });
+    </script>
+    <!-- // Это сам скрипт плавной прокрутки до якоря -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-    <script src="shares/js/min/bootstrap.min.js"></script>
-
 
     <!-- Скрипт прокрутки страницы вверх -->
     <script>
@@ -62,28 +78,6 @@
         });
         </script>
          <!-- // Скрипт прокрутки страницы вверх -->
-		 
-		 <!-- Еще один скрипт прокрутки страницы вверх -->
-		 <script>
-			$(window).scroll(function(){
-				var height = $(window).scrollTop();
-				if(height > 100){
-					$('#back2Top').fadeIn();
-				}
-				else{
-					$('#back2Top').fadeOut();
-				}
-			});
-    
-			$(document).ready(function(){
-				$("#back2Top").click(function(event){
-					event.preventDefault();
-					$("html, body").animate({ scrollTop: 0}, "slow");
-					return false;
-				});
-			}); 
-		</script>
-		<!-- // Еще один скрипт прокрутки страницы вверх -->
 
       <!-- Скрипт увеличения изображения по клику -->
     <script>
@@ -130,9 +124,6 @@
 </head> 
 
 <body>
-
-
-
     <!--   навигационного меню Navbar Bootstrap 3 -->
     <div class="wrapper_menu">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -422,7 +413,6 @@
                 </div><!--//item-->
 
 
-
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
@@ -440,11 +430,6 @@
                 </div><!--//item-->
 
 
-
-
-
-
-              
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
@@ -598,10 +583,6 @@
                     <span class="project-tagline">An Objective-C iOS app tutorial project.</span>
                 </div><!--//item-->
 
-                
-
-
-
             </section><!--//section-->
             
 
@@ -684,11 +665,12 @@
     </footer><!--//footer-->
 	
 
- 
-    <!-- Javascript -->          
-    <!-- <script type="text/javascript" src="shares/plugins/jquery-1.11.3.min.js"></script> --> 
-    <script type="text/javascript" src="shares/plugins/bootstrap/js/bootstrap.min.js"></script>   
-    <!-- custom js -->
+    <!-- Javascript раскрытие меню в режиме "min"-->
+    <script type="text/javascript" src="shares/plugins/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="shares/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- custom js  прокрутка страницы вверх -->
     <script type="text/javascript" src="shares/js/main.js"></script>          
 </body>
 </html> 
