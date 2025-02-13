@@ -367,7 +367,7 @@ img {
   font-size: 14px; /* размер шрифта (иконки) */
   border-top-left-radius: 6px; /* скругление верхнего левого угла */
   border-top-right-radius: 6px; /* скругление верхнего правого угла */
-  border-bottom-left-radius-left-radius: 6px; /* скругление нижнего левого угла */
+  border-bottom-left-radius: 6px; /* скругление нижнего левого угла */
   border-bottom-right-radius: 6px; /* скругление нижнего правого угла */
   cursor: pointer; /* форма курсора */
   display: none; /* не отображать элемент */
