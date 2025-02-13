@@ -21,7 +21,7 @@
             background: var(--tg-theme-bg-color);
         }
 
-        main {
+        #main {
             width: 100%;
             padding: 20px;
             text-align: center;
@@ -55,7 +55,7 @@
             background: var(--tg-theme-secondary-bg-color);
         }
 
-        form {
+        #form {
           display: none;
           text-align: center;
         }
@@ -77,10 +77,12 @@
 </head>
     
 <body>
-    <h1>Онлайн магазин</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
-    <p>Мы продаем только качественные, востребованные товары</p>
-    <botton id="buy">Купить</botton>
+    <div id="main">
+        <h1>Онлайн магазин</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+        <p>Мы продаем только качественные, востребованные товары</p>
+        <botton id="buy">Купить</botton>
+    </div>
 
     <form id="form">
       <input type="text" placeholder="Имя" id="user_name">
