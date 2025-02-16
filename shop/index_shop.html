@@ -119,22 +119,22 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-            if(name.length > 5) {
+            if(name.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка имени';
                 return;
             }
-            if(email.length > 5) {
+            if(email.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в email';
                 return;
             }
-            if(phone.length > 5) {
+            if(phone.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в номере телефона';
                 return;
             }
 
             let data = {
-                name: name;
-                email: email;
+                name: name,
+                email: email,
                 phone: phone
             }
             tg.sendData(JSON.stringify(data));
