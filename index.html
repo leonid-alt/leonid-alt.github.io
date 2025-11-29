@@ -14,40 +14,57 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            overflow: hidden;
+            overflow-x: hidden;
+            padding: 20px;
+            /* Поддержка прокрутки для Firefox и Edge */
+            min-width: 320px;
+        }
+
+        .maintenance-wrapper {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Обеспечиваем прокрутку если контент не помещается */
+            min-height: min-content;
         }
 
         .maintenance-container {
             text-align: center;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            max-width: 650px;
-            width: 90%;
+            padding: 60px 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            /* Поддержка прокрутки */
+            box-sizing: border-box;
+            margin: auto;
         }
 
         .language-switcher {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 25px;
+            right: 25px;
             display: flex;
-            gap: 10px;
+            gap: 12px;
+            z-index: 1000; /* Добавляем высокий z-index */
         }
 
         .lang-btn {
             background: rgba(255, 255, 255, 0.2);
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -56,7 +73,13 @@
             transition: all 0.3s ease;
             font-weight: bold;
             color: white;
-            font-size: 14px;
+            font-size: 15px;
+            /* Поддержка touch устройств */
+            touch-action: manipulation;
+            /* Обеспечиваем кликабельность */
+            pointer-events: auto;
+            position: relative;
+            z-index: 1001;
         }
 
         .lang-btn:hover {
@@ -67,43 +90,50 @@
         .lang-btn.active {
             background: rgba(255, 255, 255, 0.4);
             transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
         }
 
         .maintenance-icon {
-            font-size: 5rem;
-            margin-bottom: 25px;
+            font-size: 6rem;
+            margin-bottom: 30px;
             animation: pulse 2s infinite;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 25px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+            /* Поддержка переноса длинных слов */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
             opacity: 0.9;
+            /* Поддержка переноса текста */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .progress-container {
-            margin: 30px 0;
+            margin: 35px 0;
         }
 
         .progress-text {
-            margin-bottom: 10px;
-            font-size: 1rem;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
             opacity: 0.8;
         }
 
         .progress-bar {
             width: 100%;
-            height: 8px;
+            height: 10px;
             background: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
+            border-radius: 5px;
             overflow: hidden;
         }
 
@@ -112,27 +142,30 @@
             height: 100%;
             background: linear-gradient(90deg, #ff9a9e, #fad0c4);
             animation: progressAnimation 3s infinite;
-            border-radius: 4px;
+            border-radius: 5px;
         }
 
         .contact-info {
-            margin-top: 30px;
-            padding-top: 20px;
+            margin-top: 35px;
+            padding-top: 25px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .contact-info p {
-            margin-bottom: 10px;
-            font-size: 1rem;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
         }
 
         .countdown {
-            margin-top: 20px;
-            font-size: 1.1rem;
+            margin-top: 25px;
+            font-size: 1.2rem;
             background: rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 12px 25px;
+            border-radius: 12px;
             display: inline-block;
+            /* Поддержка переноса */
+            word-wrap: break-word;
+            max-width: 100%;
         }
 
         /* Скрываем неактивный контент */
@@ -162,76 +195,480 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Адаптивность для мобильных устройств */
-        @media (max-width: 600px) {
+        /* Стили для скроллбара (поддержка Firefox) */
+        .maintenance-wrapper {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+        }
+
+        /* Стили для скроллбара (Webkit браузеры) */
+        @media (max-width: 768px) {
+            .maintenance-wrapper::-webkit-scrollbar {
+                width: 6px;
+            }
+            
+            .maintenance-wrapper::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            
+            .maintenance-wrapper::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 3px;
+            }
+            
+            .maintenance-wrapper::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* Планшеты (768px - 1024px) */
+        @media (max-width: 1024px) {
             .maintenance-container {
-                padding: 40px 25px;
+                padding: 50px 40px;
+                max-width: 700px;
+            }
+            
+            .maintenance-icon {
+                font-size: 5.5rem;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.7rem;
             }
             
             p {
+                font-size: 1.25rem;
+            }
+            
+            .language-switcher {
+                top: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Большие смартфоны (576px - 768px) */
+        @media (max-width: 768px) {
+            body {
+                /* Разрешаем прокрутку на мобильных */
+                overflow-y: auto;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            
+            .maintenance-wrapper {
+                min-height: auto;
+                padding: 10px 0;
+            }
+            
+            .maintenance-container {
+                padding: 45px 35px;
+                max-width: 600px;
+                border-radius: 20px;
+                margin: 10px auto;
+            }
+            
+            .maintenance-icon {
+                font-size: 5rem;
+                margin-bottom: 25px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+                margin-bottom: 20px;
+            }
+            
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 25px;
+            }
+            
+            .progress-container {
+                margin: 30px 0;
+            }
+            
+            .progress-bar {
+                height: 9px;
+            }
+            
+            .countdown {
                 font-size: 1.1rem;
+                padding: 10px 20px;
+            }
+            
+            .contact-info {
+                margin-top: 30px;
+                padding-top: 20px;
+            }
+            
+            .language-switcher {
+                top: 18px;
+                right: 18px;
+            }
+            
+            .lang-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 14px;
+            }
+        }
+
+        /* Средние смартфоны (425px - 576px) */
+        @media (max-width: 576px) {
+            body {
+                padding: 12px;
+                overflow-y: auto;
+            }
+            
+            .maintenance-wrapper {
+                padding: 5px 0;
+            }
+            
+            .maintenance-container {
+                padding: 40px 25px;
+                max-width: 500px;
+                border-radius: 18px;
+                margin: 5px auto;
+            }
+            
+            .maintenance-icon {
+                font-size: 4.5rem;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                font-size: 2.1rem;
+                margin-bottom: 18px;
+            }
+            
+            p {
+                font-size: 1.15rem;
+                margin-bottom: 22px;
+                line-height: 1.6;
+            }
+            
+            .progress-container {
+                margin: 25px 0;
+            }
+            
+            .progress-text {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
+            .progress-bar {
+                height: 8px;
+            }
+            
+            .countdown {
+                font-size: 1rem;
+                padding: 10px 18px;
+                margin-top: 20px;
+            }
+            
+            .contact-info {
+                margin-top: 25px;
+                padding-top: 18px;
+            }
+            
+            .contact-info p {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+            
+            .language-switcher {
+                top: 15px;
+                right: 15px;
+                gap: 10px;
+            }
+            
+            .lang-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 13px;
+            }
+        }
+
+        /* Маленькие смартфоны (375px - 425px) */
+        @media (max-width: 425px) {
+            body {
+                padding: 10px;
+                overflow-y: auto;
+            }
+            
+            .maintenance-wrapper {
+                padding: 5px 0;
+            }
+            
+            .maintenance-container {
+                padding: 35px 20px;
+                border-radius: 16px;
+                margin: 5px auto;
             }
             
             .maintenance-icon {
                 font-size: 4rem;
+                margin-bottom: 18px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+                margin-bottom: 16px;
+            }
+            
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+            
+            .progress-container {
+                margin: 22px 0;
+            }
+            
+            .progress-text {
+                font-size: 0.95rem;
+            }
+            
+            .progress-bar {
+                height: 7px;
+            }
+            
+            .countdown {
+                font-size: 0.95rem;
+                padding: 8px 16px;
+                margin-top: 18px;
+            }
+            
+            .contact-info {
+                margin-top: 22px;
+                padding-top: 16px;
+            }
+            
+            .contact-info p {
+                font-size: 0.95rem;
+            }
+            
+            .language-switcher {
+                top: 12px;
+                right: 12px;
+            }
+            
+            .lang-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 12px;
+            }
+        }
+
+        /* Очень маленькие смартфоны (до 375px) */
+        @media (max-width: 375px) {
+            body {
+                padding: 8px;
+                overflow-y: auto;
+            }
+            
+            .maintenance-wrapper {
+                padding: 3px 0;
+            }
+            
+            .maintenance-container {
+                padding: 30px 15px;
+                border-radius: 14px;
+                margin: 3px auto;
+            }
+            
+            .maintenance-icon {
+                font-size: 3.5rem;
+                margin-bottom: 15px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+                margin-bottom: 15px;
+            }
+            
+            p {
+                font-size: 1rem;
+                margin-bottom: 18px;
+                line-height: 1.5;
+            }
+            
+            .progress-container {
+                margin: 20px 0;
+            }
+            
+            .progress-text {
+                font-size: 0.9rem;
+            }
+            
+            .countdown {
+                font-size: 0.9rem;
+                padding: 7px 14px;
+                margin-top: 16px;
+            }
+            
+            .contact-info {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+            
+            .contact-info p {
+                font-size: 0.9rem;
+            }
+            
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+                gap: 8px;
+            }
+            
+            .lang-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 11px;
+            }
+        }
+
+        /* Ландшафтная ориентация мобильных устройств */
+        @media (max-height: 500px) and (orientation: landscape) {
+            body {
+                padding: 10px;
+                align-items: flex-start;
+                overflow-y: auto;
+            }
+            
+            .maintenance-wrapper {
+                padding: 5px 0;
+            }
+            
+            .maintenance-container {
+                padding: 25px 30px;
+                margin: 5px auto;
+            }
+            
+            .maintenance-icon {
+                font-size: 3rem;
+                margin-bottom: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+            
+            p {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            
+            .progress-container {
+                margin: 15px 0;
+            }
+        }
+
+        /* Особые случаи для очень маленьких высот */
+        @media (max-height: 400px) {
+            .maintenance-container {
+                padding: 20px 25px;
+            }
+            
+            .maintenance-icon {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+            
+            .countdown {
+                margin-top: 12px;
+                padding: 6px 12px;
+            }
+        }
+
+        /* Поддержка уменьшенного движения */
+        @media (prefers-reduced-motion: reduce) {
+            .maintenance-icon,
+            .progress,
+            .content.active {
+                animation: none;
+            }
+        }
+
+        /* Высокопиксельные дисплеи */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .maintenance-container {
+                border-width: 0.5px;
+            }
+        }
+
+        /* Поддержка очень старых браузеров */
+        @supports not (backdrop-filter: blur(15px)) {
+            .maintenance-container {
+                background: rgba(255, 255, 255, 0.15);
             }
         }
     </style>
 </head>
 <body>
-    <div class="maintenance-container">
-        <div class="language-switcher">
-            <button class="lang-btn active" data-lang="ru">RU</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-        </div>
-        
-        <!-- Русский контент -->
-        <div class="content ru active">
-            <div class="maintenance-icon">🔧</div>
-            <h1>Сайт временно недоступен</h1>
-            <p>В настоящее время на сайте проводятся технические работы. Приносим извинения за временные неудобства.</p>
+    <div class="maintenance-wrapper">
+        <div class="maintenance-container">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
             
-            <div class="progress-container">
-                <div class="progress-text">Работы в процессе...</div>
-                <div class="progress-bar">
-                    <div class="progress"></div>
+            <!-- Русский контент -->
+            <div class="content ru active">
+                <div class="maintenance-icon">🔧</div>
+                <h1>Сайт временно недоступен</h1>
+                <p>В настоящее время на сайте проводятся технические работы. Приносим извинения за временные неудобства.</p>
+                
+                <div class="progress-container">
+                    <div class="progress-text">Работы в процессе...</div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                
+                <p>Работы будут завершены в ближайшее время. Пожалуйста, зайдите позже.</p>
+                
+                <div class="countdown">Ориентировочное время завершения: 2 часа</div>
+                
+                <div class="contact-info">
+                    <p>По вопросам обращайтесь:</p>
+                    <p>support@example.com | +7 (123) 456-78-90</p>
                 </div>
             </div>
             
-            <p>Работы будут завершены в ближайшее время. Пожалуйста, зайдите позже.</p>
-            
-            <div class="countdown">Ориентировочное время завершения: 24 часа</div>
-            
-            <div class="contact-info">
-                <p>По вопросам обращайтесь:</p>
-                <p>stepanow@bk.ru</p>
-            </div>
-        </div>
-        
-        <!-- Английский контент -->
-        <div class="content en">
-            <div class="maintenance-icon">🔧</div>
-            <h1>Site Temporarily Unavailable</h1>
-            <p>We are currently performing technical maintenance on the website. We apologize for any inconvenience.</p>
-            
-            <div class="progress-container">
-                <div class="progress-text">Work in progress...</div>
-                <div class="progress-bar">
-                    <div class="progress"></div>
+            <!-- Английский контент -->
+            <div class="content en">
+                <div class="maintenance-icon">🔧</div>
+                <h1>Site Temporarily Unavailable</h1>
+                <p>We are currently performing technical maintenance on the website. We apologize for any inconvenience.</p>
+                
+                <div class="progress-container">
+                    <div class="progress-text">Work in progress...</div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <p>The maintenance will be completed shortly. Please check back later.</p>
-            
-            <div class="countdown">Estimated completion time: 24 hours</div>
-            
-            <div class="contact-info">
-                <p>For inquiries, please contact:</p>
-                <p>stepanow@bk.ru</p>
+                
+                <p>The maintenance will be completed shortly. Please check back later.</p>
+                
+                <div class="countdown">Estimated completion time: 2 hours</div>
+                
+                <div class="contact-info">
+                    <p>For inquiries, please contact:</p>
+                    <p>support@example.com | +7 (123) 456-78-90</p>
+                </div>
             </div>
         </div>
     </div>
@@ -274,24 +711,33 @@
             
             // Обработчики событий для кнопок переключения языка
             langButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function(e) {
+                    // Останавливаем всплытие события
+                    e.stopPropagation();
+                    e.preventDefault();
+                    
                     const lang = this.dataset.lang;
                     switchLanguage(lang);
                 });
             });
             
-            // Блокировка всех действий на странице
+            // Блокировка всех действий на странице, кроме кнопок переключения языка
             document.addEventListener('click', function(e) {
                 // Разрешаем клики только по кнопкам переключения языка
-                if (!e.target.classList.contains('lang-btn')) {
+                if (!e.target.classList.contains('lang-btn') && 
+                    !e.target.closest('.language-switcher')) {
                     e.preventDefault();
                     e.stopPropagation();
                 }
             }, true);
 
+            // Блокировка клавиатуры
             document.addEventListener('keydown', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
+                // Разрешаем только комбинации клавиш для разработчиков
+                if (!e.ctrlKey && !e.metaKey) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
             }, true);
 
             document.addEventListener('contextmenu', function(e) {
@@ -305,6 +751,36 @@
             document.addEventListener('dragstart', function(e) {
                 e.preventDefault();
             }, true);
+
+            // Поддержка прокрутки для Firefox и Edge
+            function enableScroll() {
+                document.body.style.overflowY = 'auto';
+                document.documentElement.style.overflowY = 'auto';
+            }
+
+            // Проверяем, нужно ли включить прокрутку
+            function checkScrollNeeded() {
+                const container = document.querySelector('.maintenance-container');
+                const wrapper = document.querySelector('.maintenance-wrapper');
+                
+                if (container && wrapper) {
+                    const containerHeight = container.offsetHeight;
+                    const wrapperHeight = wrapper.offsetHeight;
+                    const windowHeight = window.innerHeight;
+                    
+                    // Если контент не помещается в окно, включаем прокрутку
+                    if (containerHeight > windowHeight - 40) {
+                        enableScroll();
+                    }
+                }
+            }
+
+            // Проверяем при загрузке и изменении размера
+            window.addEventListener('load', checkScrollNeeded);
+            window.addEventListener('resize', checkScrollNeeded);
+            
+            // Дополнительная проверка после анимаций
+            setTimeout(checkScrollNeeded, 1000);
         });
 
         // Дополнительная защита от обхода
@@ -312,6 +788,23 @@
             e.preventDefault();
             e.returnValue = '';
         });
+
+        // Адаптация для touch устройств
+        document.addEventListener('touchmove', function(e) {
+            // Разрешаем тач события только для кнопок переключения языка
+            if (!e.target.classList.contains('lang-btn') && 
+                !e.target.closest('.language-switcher')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // Поддержка прокрутки колесиком мыши
+        document.addEventListener('wheel', function(e) {
+            if (document.body.style.overflowY === 'auto') {
+                return; // Позволяем прокрутку если она включена
+            }
+            e.preventDefault();
+        }, { passive: false });
     </script>
 </body>
 </html>
