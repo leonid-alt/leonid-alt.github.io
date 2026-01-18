@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио баннеров | Banner Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/banport.css">
+    <!--  стили  для прокрутки страницы вверх -->
+    <link rel="stylesheet" href="./css/scrollup.css">
+    <!--  стили  для баннера parallax -->
+    <link rel="stylesheet" href="./css/parallax.css">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicons/frame.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/icon180.png">
+
+</head>
+
+<body>
+    <!--  svg картинка кнопки прокрутки страницы вверх -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="arrow-up-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+        </symbol>
+    </svg>
+    <!--  поведение кнопки прокрутки страницы вверх -->
+    <div class="btn-up btn-up_hide">
+        <svg class="btn-up-icon" role="img" aria-label="Прокрутить страницу к началу">
+            <use xlink:href="#arrow-up-short"></use>
+        </svg>
+    </div>
+    <!-- Header -->
+    <a id="logo"></a>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo-ico">
+                <img src="./images/favicons/favicon.ico" alt="QR-логотип">
+            </div>
+            <div class="logo">BannerPortfolio</div>
+            <div class="nav-links">
+                <ul class="dropdown">
+                    <li><a href="#logo">Наверх &nbsp</a></li>
+                    <li><a href="#complex">Сложные баннеры &nbsp</a></li>
+                    <li>
+                        <a href="#gif_all">GIF-баннеры &nbsp</a>
+                        <ul class="submenu">
+                            <li><a href="#">&nbsp</a></li><Br>
+                            <li><a href="#gif_728x90">728x90</a></li>
+                            <li><a href="#gif_300x250">300x250</a></li>
+                            <li><a href="#gif_160x600">160x600</a></li>
+                        </ul>
+                        <!-- <li><a href="#gif_468x60">468x60</a></li>
+                        <li><a href="#gif_300x600">300x600</a></li>
+                        <li><a href="#gif_180x160">180x160</a></li> -->
+                    </li>
+
+                    <li>
+                        <a href="#maintenance">Web-страницы &nbsp</a>
+                        <ul class="submenu">
+                            <li><a href="#">&nbsp</a></li><Br>
+                            <li><a href="#stop-page">Страницы обслуживания</a>
+                                <!--    <ul class="submenu">
+                                <li><a href="#">&nbsp</a></li><Br>
+                                <li><a href="#stop-page">Макс</a></li>
+                                <li><a href="#stop-page">Мин</a></li>
+                            </ul>
+                        -->
+                            </li>
+                            <li><a href="#landing_design">Лендинг-страницы</a>
+                                <ul class="submenu">
+                                    <li><a href="#">&nbsp</a></li><Br>
+                                    <li><a href="#landing_design">Дизайн</a></li>
+                                    <li><a href="#landing_layout">Верстка</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#contact">Контакты &nbsp</a>
+                        <ul class="submenu">
+                            <li><a href="#">&nbsp</a></li><Br>
+                            <li><a href="https://leonid-alt.github.io/index_1.html" target="_blank">Leonid N.
+                                    Stepanov</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Портфолио баннеров</h1>
+            <p>Коллекция современных анимированных баннеров и страниц обслуживания. Интерактивные решения для вашего
+                бизнеса.</p>
+            <a href="#complex" class="btn">Смотреть работы</a>
+        </div>
+    </section>
+
+    <!-- Complex Banners Section -->
+    <section id="complex" class="section">
+        <h2 class="section-title">Сложные интерактивные баннеры</h2>
+        <div class="complex-banners">
+            <!-- Баннер 1: 3D карточка -->
+            <div class="portfolio-item">
+                <div class="item-header">
+                    <h3 class="item-title">3D Баннер с параллаксом</h3>
+                    <span class="item-size">Интерактивный</span>
+                </div>
+
+                <div class="wrapper parallax">
+                    <div class="parallax-layer parallax-image">
+                        <img src="./images/2560.jpg" alt="Сад изящных слов">
+                    </div>
+                    <span class="parallax-layer parallax-text">Сад изящных слов</span>
+                </div>
+
+                <p>Баннер на CSS с 3D трансформациями и параллакс эффектом при наведении</p>
+            </div>
+
+            <!-- Баннер 2: Продуктовый -->
+            <div class="portfolio-item">
+                <div class="item-header">
+                    <h3 class="item-title">Продуктовый баннер</h3>
+                    <span class="item-size">Анимированный</span>
+                </div>
+                <div class="banner-300x300">
+                    <img src="./images/WebBanner_70.jpg" width="230" height="250" alt="">
+                    <p>Интерактивный баннер со статистикой продукта и анимированными элементами</p>
+                    <!-- Баннер 3: Аналитика -->
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="item-header">
+                    <h3 class="item-title">Аналитическая панель</h3>
+                    <span class="item-size">Динамическая</span>
+                </div>
+                <div class="banner-preview">
+                    <div class="animated-banner banner-300x250"
+                        style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                        <div class="slide slide-1">
+                            <div style="text-align: center;">
+                                <div class="banner-title">АНАЛИТИКА</div>
+                                <div class="banner-text">Производительность</div>
+                                <div style="display: flex; gap: 5px; margin: 15px 0; justify-content: center;">
+                                    <div
+                                        style="width: 20px; height: 60px; background: linear-gradient(to top, #ff6b6b, #ffd93d); border-radius: 3px;">
+                                    </div>
+                                    <div
+                                        style="width: 20px; height: 80px; background: linear-gradient(to top, #ff6b6b, #ffd93d); border-radius: 3px;">
+                                    </div>
+                                    <div
+                                        style="width: 20px; height: 45px; background: linear-gradient(to top, #ff6b6b, #ffd93d); border-radius: 3px;">
+                                    </div>
+                                </div>
+                                <button class="banner-button">ОБНОВИТЬ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Баннер с динамическими графиками и обновляемой статистикой</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIF Banners Section -->
+    <a id="gif_all"></a>
+    <section class="section" style="background: rgba(0,0,0,0.3);">
+        <h2 class="section-title">GIF-баннеры различных форматов</h2>
+
+        <div class="item-header">
+            <h3 id="gif_728x90" class="item-title">Горизонтальные баннеры &nbsp</h3>
+
+        </div>
+        <div class="gif-banners">
+            <!-- Баннер 728x90 -->
+
+            <div class="portfolio-item gif-item">
+                <span class="item-size">728×90</span>
+                <h3>Идеальны для шапки сайта и промо-блоков</h3><br>
+
+                <div class="gif-preview">
+                    <div class="banner-728x90">
+                        <img src="./images/MovingTextBanner.gif" width="728" height="90" alt="">
+                    </div>
+                </div>
+
+                <div class="gif-preview">
+                    <div class="banner-728x90">
+                        <img src="./images/44.gif" width="728" height="90" alt="">
+                    </div>
+                </div>
+                <div class="gif-preview">
+                    <div class="banner-728x90">
+                        <img src="./images/Gif-Banner.gif" width="728" height="90" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Баннер 300x250 -->
+        <p><a id="gif_300x250"></a></p><br>
+        <div class="item-header">
+            <h3 class="item-title">Квадратные баннеры &nbsp</h3>
+        </div>
+
+        <div class="portfolio-item gif-item">
+            <span class="item-size">300×250</span>
+            <h3>Подходят для сайдбаров и рекламных блоков</h3><br>
+            <div class="gif-preview">
+
+
+                <div class="banner-300x250">
+                    <img src="./images/5.gif" width="300" height="250" alt="">
+                </div>
+
+                <div class="banner-10x600">
+                    <img src="1.png" width="10" height="100" alt="">
+                </div>
+
+                <div class="banner-300x250">
+                    <img src="./images/300x250.gif" width="300" height="250" alt="">
+                </div>
+
+                <div class="banner-10x600">
+                    <img src="1.png" width="10" height="100" alt="">
+                </div>
+
+                <div class="banner-300x250">
+                    <img src="./images/21.gif" width="300" height="250" alt="">
+                </div>
+
+                <div class="banner-10x600">
+                    <img src="1.png" width="10" height="100" alt="">
+                </div>
+
+                <div class="banner-300x250">
+                    <img src="./images/24.gif" width="300" height="250" alt="">
+                </div>
+            </div>
+
+            <!-- Баннер 160x600 -->
+            <p><a id="gif_160x600"></a></p><br>
+
+            <div class="item-header">
+                <h3 class="item-title">Высокие баннеры</h3>
+
+            </div>
+            <div class="portfolio-item gif-item">
+                <span class="item-size">160×600</span>
+                <h3>Для узких колонок и skyscraper рекламы &nbsp</h3>
+
+                <div class="gif-preview">
+
+                    <div class="banner-160x600">
+                        <img src="./images/4.gif" width="160" height="600" alt="">
+                    </div>
+                    <div class="banner-10x600">
+                        <img src="1.png" width="10" height="60" alt="">
+                    </div>
+                    <div class="banner-160x600">
+                        <img src="./images/160-x-600.gif" width="160" height="600" alt="">
+                    </div>
+                    <div class="banner-10x600">
+                        <img src="1.png" width="10" height="60" alt="">
+                    </div>
+                    <div class="banner-160x600">
+                        <img src="./images/17.gif" width="160" height="600" alt="">
+                    </div>
+                    <div class="banner-10x600">
+                        <img src="1.png" width="10" height="60" alt="">
+                    </div>
+                    <div class="banner-160x600">
+                        <img src="./images/18.gif" width="160" height="600" alt="">
+                    </div>
+                    <div class="banner-10x600">
+                        <img src="1.png" width="10" height="60" alt="">
+                    </div>
+                    <div class="banner-160x600">
+                        <img src="./images/1.gif" width="160" height="600" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Pages Section -->
+    <p><a id="stop-page"></a></p>
+    <section id="maintenance" class="section">
+        <h2 class="section-title">Страницы обслуживания</h2>
+        <div class="banner-grid">
+            <div class="portfolio-item">
+                <div class="item-header">
+                    <h3 class="item-title">Многоязычная страница &nbsp</h3>
+                    <span class="item-size"><a class="nav-link" href="https://leonid-alt.github.io/index_2.html"
+                            target="_blank">Адаптивная</a></span>
+                </div>
+
+
+                <div class="banner-preview"
+                    style="min-height: 250px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #6a11cb, #2575fc);">
+
+
+                    <div class="maintenance-wrapper1">
+                        <div class="maintenance-container">
+                            <div class="language-switcher">
+                                <button class="lang-btn active" data-lang="ru">RU</button>
+                                <button class="lang-btn" data-lang="en">EN</button>
+                            </div>
+
+                            <!-- Русский контент -->
+                            <div class="content ru active">
+                                <div class="maintenance-icon">🔧</div>
+                                <h1>Сайт временно недоступен</h1>
+                                <p>В настоящее время на сайте проводятся технические работы. Приносим извинения за
+                                    временные неудобства.</p>
+
+                                <div class="progress-container">
+                                    <div class="progress-text">Работы в процессе...</div>
+                                    <div class="progress-bar">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+
+                                <p>Работы будут завершены в ближайшее время. Пожалуйста, зайдите позже.</p>
+
+                                <div class="countdown">Ориентировочное время завершения: 2 часа</div>
+
+                                <div class="contact-info">
+                                    <p>По вопросам обращайтесь:</p>
+                                    <p>support@example.com | +7 (123) 456-78-90</p>
+                                </div>
+                            </div>
+
+                            <!-- Английский контент -->
+                            <div class="content en">
+                                <div class="maintenance-icon">🔧</div>
+                                <h1>Site Temporarily Unavailable</h1>
+                                <p>We are currently performing technical maintenance on the website. We apologize for
+                                    any inconvenience.</p>
+
+                                <div class="progress-container">
+                                    <div class="progress-text">Work in progress...</div>
+                                    <div class="progress-bar">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+
+                                <p>The maintenance will be completed shortly. Please check back later.</p>
+
+                                <div class="countdown">Estimated completion time: 2 hours</div>
+
+                                <div class="contact-info">
+                                    <p>For inquiries, please contact:</p>
+                                    <p>support@example.com | +7 (123) 456-78-90</p>
+                                </div>
+                            </div>
+                            <script src="./js/stop_js.js"></script>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <p>Страница обслуживания с переключением языков и анимациями</p>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="item-header">
+                    <h3 class="item-title">Минималистичная страница &nbsp</h3>
+                    <span class="item-size">Чистый дизайн</span>
+                </div>
+                <div class="banner-preview"
+                    style="min-height: 250px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px; animation: bounce 2s infinite;">⏳</div>
+                        <h3 style="margin-bottom: 10px;">Скоро вернемся</h3>
+                        <p style="opacity: 0.9;">Мы работаем над улучшением сервиса</p>
+                        <div
+                            style="width: 200px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 3px; margin: 20px auto; overflow: hidden;">
+                            <div
+                                style="width: 60%; height: 100%; background: linear-gradient(90deg, #ff6b6b, #ffd93d); animation: progressAnimation 3s infinite;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Простая и элегантная страница с индикатором прогресса</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Landing Pages Section -->
+    <a id="landing_design"></a>
+    <section id="maintenance-wrapper1" class="section">
+        <h2 class="section-title">Лендинг-страницы: дизайн и верстка</h2>
+        <div class="item-header">
+            <h3 class="item-title">Многоязычная лендинг-страница &nbsp</h3>
+            <span class="item-size">дизайн</span>
+        </div>
+        <div style="text-align: center;">
+            <!-- Русский контент -->
+            <div class="gif-preview">
+                <div class="landing-1920x1000">
+                    <img src="images/Дизайн-лендинга-в-фотошопе-с нуля_1920_1000.jpg" width="1920" height="1000" alt="">
+                </div>
+            </div>
+            <!-- Английский контент -->
+        </div>
+        <p>Адаптивная многоязычная лендинг-страница</p>
+    </section>
+
+
+
+    <a id="landing_layout"></a>
+    <section id="maintenance-wrapper1" class="section">
+        <div class="item-header">
+            <h3 class="item-title">Минималистичная лендинг-страница &nbsp</h3>
+            <span class="item-size">верстка</span>
+        </div>
+        <div style="text-align: center;">
+            <!-- Русский контент -->
+            <div class="gif-preview">
+                <div class="landing-1920x1000">
+                    <img src="./images/Дизайн-лендинга-в-фотошопе-с нуля_1920_1000_Grad.jpg" width="1920" height="1000"
+                        alt="">
+                </div>
+            </div>
+            <!-- Английский контент -->
+        </div>
+        <p>Простая лендинг-страница</p>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Готовы к сотрудничеству?</h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+                Создам современные анимированные баннеры и страницы для вашего проекта.
+                Адаптирую под любые требования и форматы.
+            </p>
+            <a href="mailto:stepanow@bk.ru" class="btn">Связаться со мной</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="text-center">
+
+            <div class="logo" style="font-size: 2rem; margin-bottom: 20px;">BannerPortfolio</div>
+            <p>Создание современных веб-баннеров и интерфейсов</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <!--  скрипт  календаря -->
+            <script src="./js/calendar.js"></script>
+            <p>&copy; BannerPortfolio.</p>
+        </div>
+        </div>
+
+    </footer>
+
+    <!--  скрипт  для прокрутки портфолио 
+    <script src="js/_scrollportfolio.js"></script> -->
+
+    <!--  скрипт  для прокрутки страницы вверх -->
+    <script src="./js/scrollup.js"></script>
+    </div>
+
+</body>
+
+</html>
