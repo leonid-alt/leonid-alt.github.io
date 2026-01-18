@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт жилого комплекса</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/scrollup.css">
+
+    <link rel="icon" type="image/x-icon" href="./img/favicons/frame.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/icon180.png">
+</head>
+
+<body>
+    <!--  svg картинка кнопки прокрутки страницы вверх -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="arrow-up-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+        </symbol>
+    </svg>
+    <!--  поведение кнопки прокрутки страницы вверх -->
+    <div class="btn-up btn-up_hide">
+        <svg class="btn-up-icon" role="img" aria-label="Прокрутить страницу к началу">
+            <use xlink:href="#arrow-up-short"></use>
+        </svg>
+    </div>
+
+    <article class="inner-page">
+        <div class="container">
+            <div class="inner-page-details">
+                <h1 class="inner-page-title">
+                    Сайт жилого комплекса
+                </h1>
+                <div class="inner-page-text">
+
+                    <p>Верстка многостраничного сайта. Главная, страница с услугами, карта проезда с формой обратной
+                        связи, страница со
+                        статьей.</p>
+                    <p class="link">Адрес сайта:<a href="#!" target="_blank">site.com</a></p>
+
+                </div>
+            </div>
+
+            <img class="inner-page-img" src="./img/projets/project-lofthouse.jpg"
+                srcset="./img/projets/project-lofthouse@2x.jpg 2x" alt="Сайт жилого комплекса">
+            <a href="./index.html" class="inner-page-backlink">
+                <img src="./img/icons/arrow-left.svg" alt="Назад на главную">
+                Назад на главную
+            </a>
+        </div>
+    </article>
+    <!--  скрипт  для прокрутки страницы вверх -->
+    <script src="js/scrollup.js"></script>
+</body>
+
+</html>

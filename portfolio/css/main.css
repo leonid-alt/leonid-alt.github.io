@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base */
+html {
+    /* плавный переход по ссылкам */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    /* свойство для оптимизации отображения шрифтов в разных размерах, которое автоматически делает 
+    мелкий текст жирнее (для читаемости), а крупный — тоньше и изящнее */
+    font-optical-sizing: auto;
+    /* свойство, которое определяет насыщенность или толщину шрифта,то есть насколько жирным или тонким будет текст. 
+    Оно принимает числовые значения (от 100 до 900 с шагом 100) или ключевые слова, такие как normal (обычный),
+    bold (жирный), bolder (жирнее родителя) или lighter (тонше родителя). Значения по умолчанию: normal (400) и bold (700). */
+    font-weight: 400;
+    font-style: normal;
+    /* отступ вниз на время разработки */
+    /* padding-bottom: 400px; */
+    background-color: #bdc9d4;
+}
+
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 153px;
+    padding-bottom: 80px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+    /* background-color: #252525; */
+    /* background: #252525 linear-gradient(158deg, #2f2f2f 0%, #202020 100%); */
+    background: #000;
+    color: #fff;
+    /* спрятать все что выходит за пределы хедера */
+    overflow: hidden;
+}
+
+.header-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 0px #E5E9F2;
+    height: 73px;
+    /* border-bottom: solid #E5E9F2; */
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    text-align: center;
+    background-color: #252525;
+    align-items: center;
+}
+
+.header .container {
+    position: relative;
+    z-index: 9;
+}
+
+
+
+.header-container-nav {
+    width: 1110px;
+    display: flex;
+    margin: 0 auto;
+
+    text-align: justify;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 40px;
+    margin-left: -5px;
+}
+
+.nav-link {
+    margin-right: 32px;
+    font-family: "Montserrat", sans-serif;
+    /* color: #18191f; */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: #8C30F5;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+
+
+.flags-link-img {
+    margin-right: 42px;
+    font-family: "Montserrat", sans-serif;
+    /* color: #18191f; */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    align-items: right;
+}
+
+.flags-link-img:hover {
+    /* прозрачность */
+    opacity: 0.5;
+}
+
+
+.flags-link:first-child {
+    margin-right: 0;
+}
+
+.header-video {
+    position: absolute;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-bottom-right-radius: 100px;
+    opacity: 0.7;
+    border: 3px solid #a7a6a6;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.header-img {
+    border: 3px solid #a7a6a6;
+    /* border-radius: 80px; */
+    border-bottom-right-radius: 100px;
+}
+
+.header-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.header-text {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.header-btns {
+    display: flex;
+    column-gap: 20px;
+}
+
+.btn {
+    height: 48px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #000;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 1;
+    transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+    background-color: #1782CF;
+}
+
+.btn-outline {
+    height: 48px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid #3b3b3b;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 1;
+    transition: all 0.2s ease-in;
+}
+
+.btn-outline:hover {
+    border-color: #1782CF;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 80px 0;
+}
+
+.portfolio-title {
+    margin-bottom: 65px;
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projects {
+    /* превращает элемент в контейнер для гибкого (флекс) макета, позволяя удобно и предсказуемо управлять расположением,
+    порядком, выравниванием и размерами его дочерних элементов (флекс-элементов) в одномерном пространстве (строка или столбец). */
+    display: flex;
+    /* определяет направление главной оси для элементов внутри flex-контейнера, задавая,
+    будут ли они располагаться в ряд (row - по горизонтали) или в столбец (column - по вертикали). */
+    flex-direction: column;
+    /* задаёт отступ (gutter) между рядами - 70px */
+    row-gap: 70px;
+    align-items: center;
+}
+
+.project {
+    /* выравнивание текста по центру */
+    text-align: center;
+}
+
+.project-img {
+    /* отступ вниз от картинки */
+    margin-bottom: 30px;
+    /* радиус закругления углов картинки */
+    border-radius: 30px;
+    /* плавное изменеие прозрачности  с временной функцией "ease-in" */
+    transition: opacity 0.2s ease-in;
+}
+
+.project-img:hover {
+    /* прозрачность */
+    opacity: 0.8;
+}
+
+.project-title {
+    font-size: 22px;
+}
+
+.project-title a {
+    color: #000;
+    /* подчеркнутый текст */
+    text-decoration: underline;
+}
+
+/* Contacts */
+.contacts {
+    /* отступы сверху-снизу - 80px, слеав-справа - 0px */
+    padding: 80px 0;
+    /* цвет фона */
+    background-color: #252525;
+    /* скругление верхнего левого угла */
+    border-top-left-radius: 100px;
+    /* цвет текста */
+    color: #fff;
+
+}
+
+.contacts-title {
+    margin-bottom: 65px;
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.messangers {
+    display: flex;
+    /* задаёт отступ (gutter) между колонками - 30px */
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.messanger {
+    flex-grow: 1;
+
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+
+    padding: 46px 20px;
+    border-radius: 20px;
+    border: 1px solid #363636;
+
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.2s ease-in;
+}
+
+.messanger:hover {
+    background-color: #1e1e1e;
+}
+
+/* Footer */
+.footer {
+    padding: 30px 0;
+    background-color: #1e1e1e;
+
+    color: #5d5d5d;
+}
+
+.footer a {
+    color: #5886a8;
+}
+
+.footer-inner {
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-inner p+p {
+    margin-top: 15px;
+}
+
+
+/* Inner Page */
+
+.inner-page {
+    padding: 80px 0 40px;
+}
+
+.inner-page-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.inner-page-title {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.inner-page-text {
+    max-width: 570px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    color: #555555;
+    line-height: 1.5;
+}
+
+.inner-page-link {
+    color: #000;
+}
+
+.inner-page-link a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.inner-page-img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.inner-page-backlink {
+    min-width: 770px;
+    margin: 0 auto;
+    padding: 30px;
+
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f1f1f1;
+    text-align: center;
+    color: #000;
+
+    transition: all 0.2s ease-in;
+}
+
+.inner-page-backlink:hover {
+    background-color: #dedede;
+}
