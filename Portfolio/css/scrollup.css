@@ -1,0 +1,49 @@
+    body {
+      min-height: auto;
+    }
+
+    html {
+      /* плавный переход по ссылкам */
+      scroll-behavior: smooth;
+    }
+
+    .btn-up {
+      position: fixed;
+      background-color: #0e50f7;
+      right: 20px;
+      bottom: 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 1000;
+      /* Добавляем высокий z-index */
+    }
+
+    .btn-up_hide {
+      display: none;
+    }
+
+    .btn-up_hiding {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    .btn-up-icon {
+      width: 23px;
+      height: 23px;
+      fill: currentcolor;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .btn-up:hover {
+        background-color: #ef6c00;
+      }
+    }
