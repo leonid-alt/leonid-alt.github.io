@@ -6,7 +6,7 @@
 
 :root {
     --primary: #667eea;
-    --secondary: #764ba2;
+    --secondary: #878688;
     --accent: #ff6b6b;
     --success: #4facfe;
     --warning: #ffd93d;
@@ -1089,4 +1089,5 @@ p {
     50% {
         transform: translateY(-20px) rotate(180deg);
     }
+
 }
