@@ -246,7 +246,7 @@ body {
 }
 
 .project-title {
-    font-size: 22px;
+    font-size: 16px;   /* 22px */
 }
 
 .project-title a {
@@ -393,6 +393,7 @@ body {
     background-color: #dedede;
 
 }
+
 
 
 
