@@ -86,6 +86,10 @@ body {
     margin-right: 40px;
     margin-left: -5px;
 }
+.logo:hover {
+    /* прозрачность */
+    opacity: 0.5;
+}
 
 .nav-link {
     margin-right: 32px;
@@ -393,6 +397,7 @@ body {
     background-color: #dedede;
 
 }
+
 
 
 
