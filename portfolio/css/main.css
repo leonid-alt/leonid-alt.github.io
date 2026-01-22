@@ -317,7 +317,7 @@ body {
 }
 
 .footer-inner {
-    font-size: 14px;
+    font-size: 12px; /* 14px */
     text-align: center;
 }
 
@@ -342,7 +342,7 @@ body {
 }
 
 .inner-page-title {
-    font-size: 52px;
+    font-size: 36px;    /* 52px */
     font-weight: 700;
 }
 
@@ -393,6 +393,7 @@ body {
     background-color: #dedede;
 
 }
+
 
 
 
