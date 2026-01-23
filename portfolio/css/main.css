@@ -83,8 +83,8 @@ body {
 }
 
 .logo {
-    margin-right: 40px;
-    margin-left: -5px;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 .logo:hover {
     /* прозрачность */
@@ -92,7 +92,7 @@ body {
 }
 
 .nav-link {
-    margin-right: 32px;
+    margin-right: 22px;
     font-family: "Montserrat", sans-serif;
     /* color: #18191f; */
     color: #fff;
@@ -416,6 +416,7 @@ button {
     background-color: #dedede;
 
 }
+
 
 
 
