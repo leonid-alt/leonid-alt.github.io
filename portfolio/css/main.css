@@ -319,7 +319,7 @@ button {
     border: 1px solid #363636;
 
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     transition: background-color 0.2s ease-in;
 }
 
@@ -416,6 +416,7 @@ button {
     background-color: #dedede;
 
 }
+
 
 
 
