@@ -108,7 +108,25 @@ body {
     margin-right: 0;
 }
 
+form {
+    background-color: #e6e1e1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
 
+input[type="text"] {
+    color: #000;
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: rgb(117, 187, 228);
+}
 
 .flags-link-img {
     margin-right: 42px;
@@ -397,6 +415,7 @@ body {
     background-color: #dedede;
 
 }
+
 
 
 
