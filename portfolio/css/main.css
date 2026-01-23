@@ -113,7 +113,8 @@ form {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 20px;
+    /* margin: 20px; */
+    margin: 0 auto;
 }
 
 input[type="text"] {
@@ -415,6 +416,7 @@ button {
     background-color: #dedede;
 
 }
+
 
 
 
