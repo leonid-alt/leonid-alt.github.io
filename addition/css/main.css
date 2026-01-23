@@ -212,7 +212,7 @@ a {
     margin-bottom: 17px;
 }
 
-.img:hover {
+img:hover {
    /* прозрачность */
     opacity: 0.5;
 }
