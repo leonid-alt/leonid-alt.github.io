@@ -314,7 +314,7 @@ button {
     column-gap: 15px;
     align-items: center;
 
-    padding: 46px 20px;
+    padding: 16px 40px;
     border-radius: 20px;
     border: 1px solid #363636;
 
@@ -416,6 +416,7 @@ button {
     background-color: #dedede;
 
 }
+
 
 
 
