@@ -1492,8 +1492,8 @@ footer .social .fa:hover{
 footer p{
     color: #999;
     font-weight: 400;
-    font-size: 15px;
-    text-transform: uppercase;
+    font-size: 12px;
+    /* text-transform: uppercase; */
     letter-spacing: 2px;
 }
 
