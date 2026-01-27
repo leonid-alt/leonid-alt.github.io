@@ -2,8 +2,8 @@ html, body {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    /*background: blue;*/
-    background: #d3dbe2;
+    /* background: blue; */
+    /* background: #d3dbe2; */
 }
 /*
 font-family: 'Merriweather', serif;
@@ -36,7 +36,7 @@ a {
    /* width: auto;*/
     margin-left: auto;
     margin-right: auto;
-    background: #d3dbe2;
+    /* background: #d3dbe2; */
 }
 
 .row {
@@ -190,8 +190,8 @@ a {
     PORTFOLIO
     ....................................*/
 .portfolio {
-    /* background: #fff; */
-    background: #d3dbe2;
+    background: #fff; 
+     /*background: #d3dbe2; */
     padding-top: 70px; /* Внутренний отступ сверху */
     padding-bottom: 100px; /* Внутренний отступ снизу */
 }
