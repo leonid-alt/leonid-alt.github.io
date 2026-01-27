@@ -1485,7 +1485,8 @@ footer .social .fa{
 }
 
 footer .social .fa:hover{
-    background: #ff1053;
+    <!-- background: #ff1053; -->
+    background: #51f0f2;
 }
 
 
