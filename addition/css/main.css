@@ -36,6 +36,7 @@ a {
    /* width: auto;*/
     margin-left: auto;
     margin-right: auto;
+    background: #d3dbe2;
 }
 
 .row {
@@ -189,7 +190,7 @@ a {
     PORTFOLIO
     ....................................*/
 .portfolio {
-    background: #fff;
+    /* background: #fff; */
     background: #d3dbe2;
     padding-top: 70px; /* Внутренний отступ сверху */
     padding-bottom: 100px; /* Внутренний отступ снизу */
