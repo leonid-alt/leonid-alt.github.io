@@ -316,6 +316,10 @@ Header Area starts
         background-color: #0ba0a0;
     }
 
+    .about-text:hover {
+        background-color: #dde0e0;
+    }
+
 
     .about-item:hover i,
     .about-item:hover h3,
