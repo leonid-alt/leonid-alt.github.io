@@ -317,6 +317,7 @@ Header Area starts
     }
 
     .about-text:hover {
+        padding: 30px 30px;
         background-color: #dde0e0;
     }
 
