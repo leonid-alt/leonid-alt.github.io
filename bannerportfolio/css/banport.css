@@ -81,16 +81,16 @@ html {
     align-items: center;
 }
 
+.logo-ico:hover {
+    opacity: 0.6;
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     background: linear-gradient(45deg, var(--accent), var(--warning));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.logo:hover {
-    opacity: 0.6;
 }
 
 .nav-links {
@@ -1095,5 +1095,6 @@ p {
     }
 
 }
+
 
 
