@@ -89,6 +89,10 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
+.logo:hover {
+    opacity: 0.7;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -1091,3 +1095,4 @@ p {
     }
 
 }
+
