@@ -1866,45 +1866,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
   <script>
-// Ждем загрузки страницы
-window.addEventListener('load', function() {
-    // Находим секцию по ID "port"
-    var worksSection = document.getElementById('port');
-    
-    // Проверяем, что секция существует
-    if (worksSection) {
-        console.log('Секция works найдена');
+    (function() {
+        var checkExist = setInterval(function() {
+            var section = document.getElementById('port');
         
-        // Теперь ищем кнопку ТОЛЬКО внутри этой секции
-        var allProjectsBtn = worksSection.querySelector('span[data-filter="*"]');
-        
-        if (allProjectsBtn) {
-            setTimeout(function() {
-                // Убираем активный класс у всех кнопок внутри секции
-                worksSection.querySelectorAll('.filter span').forEach(function(btn) {
-                    btn.classList.remove('active');
-                });
+            if (section) {
+                var btn = section.querySelector('span[data-filter="*"]');
+            
+                if (btn) {
+                clearInterval(checkExist);
                 
-                // Добавляем активный класс
-                allProjectsBtn.classList.add('active');
-                
-                // Эмулируем клик
-                var event = new MouseEvent('click', {
-                    bubbles: true,
-                    cancelable: true,
-                    view: window
-                });
-                allProjectsBtn.dispatchEvent(event);
-                
-                console.log('✅ Фильтр активирован в секции works');
-            }, 500);
-        } else {
-            console.log('Кнопка не найдена в секции works');
+                // Ждем немного для загрузки контента внутри секции
+                setTimeout(function() {
+                    // Убираем активный класс у всех
+                    section.querySelectorAll('.filter span').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    
+                    // Активируем кнопку "Все проекты"
+                    btn.classList.add('active');
+                    btn.click();
+                    
+                    console.log('✅ Готово!');
+                }, 50);
+            }
         }
-    } else {
-        console.log('Секция works не найдена');
-    }
-});
+    }, 50); // Проверяем каждые 50мс
+})();
 </script>
      
 </body>
