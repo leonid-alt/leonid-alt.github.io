@@ -1867,9 +1867,15 @@
     
      <!-- убедиться, что у кнопки "Все проекты" есть класс active: -->
     <script>
-        $(document).ready(function() {
-        $('span[data-filter="*"]').trigger('click');
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+        // Находим кнопку "Все проекты" по тексту или по data-filter
+        var allProjectsBtn = document.querySelector('span[data-filter="*"]');
+    
+        // Если кнопка найдена, эмулируем клик
+        if (allProjectsBtn) {
+        allProjectsBtn.click();
+        }
+    });
     </script>
 </body>
 
