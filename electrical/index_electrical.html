@@ -1866,34 +1866,94 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
   <script>
-    (function() {
-        var checkExist = setInterval(function() {
+        // Функция активации фильтра
+        function activateWorksFilter() {
             var section = document.getElementById('port');
-        
-            if (section) {
-                var btn = section.querySelector('span[data-filter="*"]');
-            
-                if (btn) {
-                clearInterval(checkExist);
-                
-                // Ждем немного для загрузки контента внутри секции
-                setTimeout(function() {
-                    // Убираем активный класс у всех
-                    section.querySelectorAll('.filter span').forEach(el => {
-                        el.classList.remove('active');
-                    });
-                    
-                    // Активируем кнопку "Все проекты"
-                    btn.classList.add('active');
-                    btn.click();
-                    
-                    console.log('✅ Готово!');
-                }, 50);
+
+            if (!section) return false;
+
+            var allBtn = section.querySelector('span[data-filter="*"]');
+
+            if (allBtn) {
+                // Проверяем, не активирован ли уже фильтр
+                if (allBtn.classList.contains('active')) {
+                    console.log('Фильтр уже активирован');
+                    return true;
+                }
+
+                section.querySelectorAll('.filter span').forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+
+                allBtn.classList.add('active');
+
+                // Пробуем разные способы активации
+                if (typeof allBtn.click === 'function') {
+                    allBtn.click();
+                }
+
+                // Дополнительно диспатчим событие
+                var event = new MouseEvent('click', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                allBtn.dispatchEvent(event);
+
+                console.log('✅ Фильтр активирован');
+                return true;
             }
+            return false;
         }
-    }, 50); // Проверяем каждые 50мс
-})();
-</script>
+
+        // Стратегия 1: MutationObserver для отслеживания появления секции
+        var observer = new MutationObserver(function (mutations) {
+            if (document.getElementById('port') && activateWorksFilter()) {
+                observer.disconnect();
+                clearInterval(intervalId);
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
+        // Стратегия 2: Интервал как запасной вариант
+        var intervalId = setInterval(function () {
+            if (activateWorksFilter()) {
+                clearInterval(intervalId);
+                observer.disconnect();
+            }
+        }, 100);
+
+        // Стратегия 3: После загрузки DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                if (activateWorksFilter()) {
+                    clearInterval(intervalId);
+                    observer.disconnect();
+                }
+            }, 300);
+        });
+
+        // Стратегия 4: После полной загрузки страницы
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                if (activateWorksFilter()) {
+                    clearInterval(intervalId);
+                    observer.disconnect();
+                }
+            }, 100);
+        });
+
+        // Останавливаем поиск через 5 секунд
+        setTimeout(function () {
+            clearInterval(intervalId);
+            observer.disconnect();
+            console.log('⏰ Поиск остановлен');
+        }, 1000);
+    </script>
      
 </body>
 
