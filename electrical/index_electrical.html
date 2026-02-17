@@ -1870,7 +1870,38 @@
     <script src="./js/jquery.responsiveTabs.min.js"></script>
     <script src="./js/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    
+
+    <script>
+    // Ждем когда страница и все скрипты полностью загрузятся
+    window.addEventListener('load', function() {
+    // Даем время плагинам инициализироваться
+    setTimeout(function() {
+        var allBtn = document.querySelector('span[data-filter="*"]');
+        
+        if (allBtn) {
+            // Убираем активный класс у всех
+            document.querySelectorAll('.filter span').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            
+            // Добавляем активный класс
+            allBtn.classList.add('active');
+            
+            // Эмулируем клик
+            var event = new MouseEvent('click', {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            allBtn.dispatchEvent(event);
+            
+            console.log('✅ Эмуляция клика выполнена');
+        } else {
+            console.log('❌ Кнопка "Все проекты" не найдена');
+        }
+    }, 500); // Задержка 500ms
+});
+</script>
      
 </body>
 
