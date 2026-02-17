@@ -1867,15 +1867,34 @@
     
      <!-- убедиться, что у кнопки "Все проекты" есть класс active: -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        // Находим кнопку "Все проекты" по тексту или по data-filter
-        var allProjectsBtn = document.querySelector('span[data-filter="*"]');
-    
-        // Если кнопка найдена, эмулируем клик
-        if (allProjectsBtn) {
-        allProjectsBtn.click();
-        }
-    });
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var allProjectsBtn = document.querySelector('span[data-filter="*"]');
+
+                if (allProjectsBtn) {
+                    // Убираем активный класс у всех кнопок
+                    document.querySelectorAll('.filter span').forEach(function (btn) {
+                        btn.classList.remove('active');
+                    });
+
+                    // Добавляем активный класс кнопке "Все проекты"
+                    allProjectsBtn.classList.add('active');
+
+                    // Эмулируем клик
+                    if (typeof filterSelection !== 'undefined') {
+                        filterSelection('*');
+                    } else {
+                        // Если функция фильтрации неизвестна, просто вызываем клик
+                        var clickEvent = new MouseEvent('click', {
+                            view: window,
+                            bubbles: true,
+                            cancelable: true
+                        });
+                        allProjectsBtn.dispatchEvent(clickEvent);
+                    }
+                }
+            }, 100); // Небольшая задержка для полной загрузки плагинов
+        });
     </script>
 </body>
 
