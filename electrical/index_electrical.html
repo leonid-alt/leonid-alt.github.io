@@ -1867,20 +1867,10 @@
     
      <!-- убедиться, что у кнопки "Все проекты" есть класс active: -->
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Добавляем класс active кнопке "Все проекты"
-    var allBtn = document.querySelector('span[data-filter="*"]');
-    if (allBtn) {
-        allBtn.classList.add('active');
-    }
-    
-    // Показываем все элементы
-    var items = document.querySelectorAll('.items');
-    items.forEach(function(item) {
-        item.style.display = 'block';
-    });
-});
-</script>
+        $(document).ready(function() {
+        $('span[data-filter="*"]').trigger('click');
+        });
+    </script>
 </body>
 
 </html>
