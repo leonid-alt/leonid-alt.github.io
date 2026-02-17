@@ -1136,6 +1136,38 @@
                 </div>
             </div>
         </div>
+<!-- убедиться, что у кнопки "Все проекты" есть класс active: -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var allProjectsBtn = document.querySelector('span[data-filter="*"]');
+
+                if (allProjectsBtn) {
+                    // Убираем активный класс у всех кнопок
+                    document.querySelectorAll('.filter span').forEach(function (btn) {
+                        btn.classList.remove('active');
+                    });
+
+                    // Добавляем активный класс кнопке "Все проекты"
+                    allProjectsBtn.classList.add('active');
+
+                    // Эмулируем клик
+                    if (typeof filterSelection !== 'undefined') {
+                        filterSelection('*');
+                    } else {
+                        // Если функция фильтрации неизвестна, просто вызываем клик
+                        var clickEvent = new MouseEvent('click', {
+                            view: window,
+                            bubbles: true,
+                            cancelable: true
+                        });
+                        allProjectsBtn.dispatchEvent(clickEvent);
+                    }
+                }
+            }, 10); // Небольшая задержка для полной загрузки плагинов
+        });
+    </script>
+        
     </section>
 
     <div class="demo">
@@ -1865,37 +1897,7 @@
     <script src="./js/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     
-     <!-- убедиться, что у кнопки "Все проекты" есть класс active: -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                var allProjectsBtn = document.querySelector('span[data-filter="*"]');
-
-                if (allProjectsBtn) {
-                    // Убираем активный класс у всех кнопок
-                    document.querySelectorAll('.filter span').forEach(function (btn) {
-                        btn.classList.remove('active');
-                    });
-
-                    // Добавляем активный класс кнопке "Все проекты"
-                    allProjectsBtn.classList.add('active');
-
-                    // Эмулируем клик
-                    if (typeof filterSelection !== 'undefined') {
-                        filterSelection('*');
-                    } else {
-                        // Если функция фильтрации неизвестна, просто вызываем клик
-                        var clickEvent = new MouseEvent('click', {
-                            view: window,
-                            bubbles: true,
-                            cancelable: true
-                        });
-                        allProjectsBtn.dispatchEvent(clickEvent);
-                    }
-                }
-            }, 1000); // Небольшая задержка для полной загрузки плагинов
-        });
-    </script>
+     
 </body>
 
 </html>
