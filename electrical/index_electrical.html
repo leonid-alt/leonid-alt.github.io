@@ -1865,23 +1865,19 @@
     <script src="./js/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-    <script>
-    // Ждем когда страница и все скрипты полностью загрузятся
-    window.addEventListener('load', function() {
-    // Даем время плагинам инициализироваться
+   <script>
+window.addEventListener('load', function() {
+    // Можно увеличить задержку для очень медленных серверов
     setTimeout(function() {
         var allBtn = document.querySelector('span[data-filter="*"]');
         
         if (allBtn) {
-            // Убираем активный класс у всех
             document.querySelectorAll('.filter span').forEach(function(btn) {
                 btn.classList.remove('active');
             });
             
-            // Добавляем активный класс
             allBtn.classList.add('active');
             
-            // Эмулируем клик
             var event = new MouseEvent('click', {
                 bubbles: true,
                 cancelable: true,
@@ -1889,7 +1885,10 @@
             });
             allBtn.dispatchEvent(event);
             
-    }, 10); // Задержка 10ms
+            // Скрываем сообщение после успеха
+            console.log('✅ Фильтр "Все проекты" активирован');
+        }
+    }, 50); // Увеличьте до 1000 если нужно
 });
 </script>
      
