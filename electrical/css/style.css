@@ -1642,7 +1642,7 @@ footer p {
 .pogo {
     color: white;
     font-size: 30px;
-
+    text-align: center;
 }
 
 .pogo:hover {
