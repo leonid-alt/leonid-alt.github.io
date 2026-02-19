@@ -78,17 +78,12 @@ Header Area starts
     background-image: none;
     border: 1px solid transparent;
     border-image: 4px;
-    transition: all 0.2s ease-in;
-    /* transition: all 500ms linear; */
 }
 
 .buttons .btn {
     padding: 18px 40px;
     margin-bottom: 20px;
     margin-right: 13px;
-    /* Замедляет изменение всех свойств на 0.2 сек */
-    transition: all 0.2s ease-in-out;
-    /* transition: all 500ms linear; */
 }
 
 .btn-pink,
@@ -98,20 +93,6 @@ Header Area starts
     font-weight: 600 !important;
     margin-right: 10px;
     font-size: 14px;
-    transition: all 0.2s ease-in-out;
-    /* transition: all 500ms linear; */
-}
-
-.btn-pink:hover {
-    box-shadow: none;
-    position: relative;
-    top: 5px;
-}
-
-.btn-blue:hover {
-    box-shadow: none;
-    position: relative;
-    top: 5px;
 }
 
 
