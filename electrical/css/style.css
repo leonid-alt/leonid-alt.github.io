@@ -102,6 +102,18 @@ Header Area starts
     /* transition: all 500ms linear; */
 }
 
+.btn-pink:hover {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+.btn-blue:hover {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
 
 .feature-text {
     padding: 10px;
