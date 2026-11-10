@@ -850,12 +850,35 @@
 	
 
     <!-- Javascript раскрытие меню в режиме "min"-->
-    <script type="text/javascript" src="shares/plugins/jquery-1.11.3.min.js"></script>
+    <!-- <script type="text/javascript" src="shares/plugins/jquery-1.11.3.min.js"></script> -->
     <script type="text/javascript" src="shares/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
     <!-- custom js  прокрутка страницы вверх -->
-    <script type="text/javascript" src="shares/js/main.js"></script>          
+    <script type="text/javascript" src="shares/js/main.js"></script>  
+
+	<!-- Убиваем рамки фокуса в Chrome/Opera -->
+<script>
+    document.addEventListener('mousedown', function(e) {
+        var el = e.target.closest('a, button, input, .navbar-nav > li');
+        if (el) {
+            setTimeout(function() {
+                if (document.activeElement) {
+                    document.activeElement.blur();
+                }
+            }, 50);
+        }
+    });
+
+    window.addEventListener('load', function() {
+        var allLinks = document.querySelectorAll('a');
+        for (var i = 0; i < allLinks.length; i++) {
+            allLinks[i].addEventListener('click', function() {
+                this.blur();
+            });
+        }
+    });
+</script>
 </body>
 </html> 
 
