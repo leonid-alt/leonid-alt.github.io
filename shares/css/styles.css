@@ -540,7 +540,50 @@ img {
             background-color: transparent;
         }
     }
+/* =======================================================
+   УБИРАЕМ ЧЕРНУЮ РАМКУ CHROME/OPERA (ФИНАЛЬНЫЙ ФИКС)
+   ======================================================= */
 
+/* 1. Запрещаем ссылкам напрямую ловить фокус мыши */
+a, 
+a:link, 
+a:visited, 
+a:hover, 
+a:active, 
+a:focus {
+    pointer-events: none !important; /* Браузер больше не будет рисовать рамку */
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. Возвращаем им кликабельность, но через родительский элемент */
+li, 
+p, 
+div, 
+span, 
+.company, 
+.degree,
+.project-title {
+    pointer-events: auto !important;
+}
+
+/* 3. Заставляем текст ссылки выглядеть как обычно */
+a {
+    display: inline;
+}
+
+/* 4. Оставляем красивое подчеркивание или полоску (как на втором скрине) */
+.navbar-default .navbar-nav > li > a {
+    text-decoration: none !important;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    border-bottom: 3px solid #2d7788;
+    color: #2d7788;
+}
 
 /*  -----------------------------   // Bootstrap 3 ------------------------- */
 
