@@ -549,9 +549,11 @@ a,
 a:link, 
 a:visited, 
 a:hover, 
+/* Убираем рамки во всех состояниях, не блокируя клики */
+a:focus, 
 a:active, 
-a:focus {
-    pointer-events: none !important; /* Браузер больше не будет рисовать рамку */
+a:focus-visible {
+    /* pointer-events: none !important;  <- ЭТО УБРАЛИ, ЧТОБЫ ССЫЛКИ РАБОТАЛИ */
     outline: none !important;
     box-shadow: none !important;
 }
