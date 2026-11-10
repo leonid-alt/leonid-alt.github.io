@@ -541,40 +541,27 @@ img {
         }
     }
 /* =======================================================
-   УБИРАЕМ ЧЕРНУЮ РАМКУ CHROME/OPERA (ФИНАЛЬНЫЙ ФИКС)
+   ФИНАЛЬНЫЙ ФИКС
    ======================================================= */
 
-/* 1. Запрещаем ссылкам напрямую ловить фокус мыши */
-a, 
-a:link, 
-a:visited, 
-a:hover, 
-/* Убираем рамки во всех состояниях, не блокируя клики */
+/* 1. Отключаем системные рамки браузера */
 a:focus, 
 a:active, 
-a:focus-visible {
-    /* pointer-events: none !important;  <- ЭТО УБРАЛИ, ЧТОБЫ ССЫЛКИ РАБОТАЛИ */
+a:focus-visible,
+button:focus,
+input:focus {
     outline: none !important;
     box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
-/* 2. Возвращаем им кликабельность, но через родительский элемент */
-li, 
-p, 
-div, 
-span, 
-.company, 
-.degree,
-.project-title {
-    pointer-events: auto !important;
-}
-
-/* 3. Заставляем текст ссылки выглядеть как обычно */
+/* 2. 100% гарантия, что ссылки кликабельны */
 a {
-    display: inline;
+    pointer-events: auto !important;
+    display: inline-block; /* Иногда помогает браузеру правильно рассчитать зону клика */
 }
 
-/* 4. Оставляем красивое подчеркивание или полоску (как на втором скрине) */
+/* 3. Красивая полоска для меню */
 .navbar-default .navbar-nav > li > a {
     text-decoration: none !important;
     border-bottom: 3px solid transparent;
