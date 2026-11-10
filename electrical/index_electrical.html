@@ -1910,6 +1910,29 @@
     }, 10); // Увеличьте до 1000 если нужно
 });
 </script>
+
+    <!-- Убиваем рамки фокуса в Chrome/Opera -->
+<script>
+    document.addEventListener('mousedown', function(e) {
+        var el = e.target.closest('a, button, input, .navbar-nav > li');
+        if (el) {
+            setTimeout(function() {
+                if (document.activeElement) {
+                    document.activeElement.blur();
+                }
+            }, 50);
+        }
+    });
+
+    window.addEventListener('load', function() {
+        var allLinks = document.querySelectorAll('a');
+        for (var i = 0; i < allLinks.length; i++) {
+            allLinks[i].addEventListener('click', function() {
+                this.blur();
+            });
+        }
+    });
+</script>
      
 </body>
 
