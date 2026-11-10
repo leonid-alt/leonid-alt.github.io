@@ -175,6 +175,21 @@
     </script>
     <!--  // скрипт прелоадера в виде анимированной svg иконки -->
 
+	<!-- Экстренный фикс черной рамки в Chrome/Opera -->
+<style>
+    /* Запрещаем браузеру рисовать фокус на ссылках и иконках */
+    a:focus, a:active, a:focus-visible,
+    a *:focus, a *:active,
+    .navbar-nav > li > a:focus, 
+    .navbar-nav > li > a:active {
+        outline: none !important;
+        outline-offset: 0 !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+</style>
+
 </head> 
 
 <body>
