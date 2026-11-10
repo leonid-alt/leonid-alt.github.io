@@ -1845,3 +1845,19 @@ nav ul li a:focus {
         display: block;
     }
 }
+
+/* Убираем рамки браузера при клике и фокусе */
+a:focus, 
+a:active, 
+a:focus-visible,
+button:focus,
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* 100% гарантия кликабельности */
+a {
+    pointer-events: auto !important;
+}
